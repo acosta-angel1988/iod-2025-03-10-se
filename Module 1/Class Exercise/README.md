@@ -1,1 +1,1 @@
-This is in class exersiceg
+This is in class exercise
