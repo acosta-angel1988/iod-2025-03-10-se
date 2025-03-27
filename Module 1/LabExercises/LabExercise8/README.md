@@ -1,1 +1,1 @@
-User will insert the
+User will insert the number of dice. pictures will show random with the amount of dices

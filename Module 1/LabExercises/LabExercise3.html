@@ -19,23 +19,27 @@ content="width=device-width, initial-scale=1.0">
         <div class="column" id="column1">
             <img src="HelloImage.png" alt="hello image">
             <h1 id="heading1">Hello</h1>
-            <button class="button1">Click Me!</button>
+            <button class="button1" onclick ="change1()">Click Me!</button>
         </div>
         <div class="column" id="column2">
             <img src="WorldImage.jpeg" alt="world image">
             <h1 id="heading2">World</h1>
-            <button class="button2">Click Me!</button>
+            <button class="button2" onclick ="change2()">Click Me!</button>
         </div>
     </div>
 
 <script>
-    document.querySelector(".button1").addEventListener('click', function(){
+    function change1(){
+        document.querySelector(".button1").addEventListener('click', function(){
         column1.style.background = ('red');
-    });
+        });
+    }
 
-    document.querySelector('.button2').addEventListener('click', function(){
+    function change2(){
+        document.querySelector('.button2').addEventListener('click', function(){
         column2.style.background = ('green');
-    });
+        });
+    } 
 </script>
 
 </body>
