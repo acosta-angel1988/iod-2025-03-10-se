@@ -1,0 +1,150 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.style-me1{
+    color: red;
+}
+
+#style-me2{
+    color: blue;
+}
+
+#style-me2 + .style-me1{
+    color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+
+div p{
+    background-color: red;
+}
+
+.my-children-are-styled > p{
+    background-color: lightgreen;
+}
+
+
+/* II. Box model and common properties */
+
+
+
+
+
+/* Put styles for questions 1-8 here */
+.box{
+    background-color: yellowgreen;
+    margin: 10px 5px 15px 20px;
+    padding: 20px 20px 20px 20px;
+    width: 15rem;
+    height: 15rem !important;
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    box-sizing: content-box;
+    overflow: scroll;
+    outline-width: 10px;
+    border-radius: 20px;
+    background-image: url("./assets/images/img1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+.position-absolute{
+    position:  absolute;
+    top: 0px;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+    background-color: blue;
+    left: 30px;
+    right: 20px;
+
+}
+
+.position-relative{
+    position:relative;
+    background-color: blanchedalmond;
+}
+
+.position-sticky{
+    position: sticky;
+    background-color: magenta;
+    top: 20px;
+}
+
+
+/* IV. Styling text */
+
+/* Put styles for questions 1-10 here */
+.text-style{
+    color: goldenrod;
+    font-size: 20px;
+    line-height: 200%;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 20px;
+    word-spacing: 15px;
+    text-transform: uppercase;
+    text-decoration: dashed;
+
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+.style-text{
+    font-family: "Gruppo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: 15px;
+    text-decoration: dashed;
+}
+
+a:link{
+    color:red;
+}
+
+a:visited{
+    color: green;
+
+}
+
+a:hover{
+    color: hotpink;
+}
+
+a:active{
+    color: blue;
+}
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+.calc-style{
+    width: 100vw;
+    background-color: aquamarine;
+    width: calc(100vw - 100px);
+}
+
+.fixed-width-col{
+    width: 350px;
+    display: inline-block;
+}
+.fluid-col{
+    display: inline-block;
+    width: calc(100\% - 350px );
+}

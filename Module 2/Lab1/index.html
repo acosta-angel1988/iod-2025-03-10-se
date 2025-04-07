@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lab 1 practice">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Angel Acosta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>My HTML learning journey</h1>
+
+    <article>
+    <!-- Div tag-->
+        <h2>Learning Division</h2>
+        <div>HTML</div> <div>CSS</div>  <div>JavaScript</div>
+
+    <!-- Span Tag-->
+        <h2>Learning Span element</h2>
+        <p>
+            <span style="color:Red">HTML</span>(HyperText Markup Language) is the standard markup language used to structure and design web pages, 
+            determining how text, images, and other content are displayed in a web browser
+        </p>
+        <p>
+            <span style="color:green">CSS</span> is used to define styles for your web pages.
+        </p>
+        <P>
+            <span style="color:blue">JavaScript</span> is a versatile, high-level programming language primarily used to add interactivity and dynamic content to websites, 
+            but also used for server-side development and mobile app development
+        </P>
+
+    <!-- p and pre tags-->
+        <h2>Learning elements p and pre</h2>
+        <p>
+        p represents paragraph     without preserving      spacing
+        </p>
+        <pre>
+        Text in         a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks
+        </pre>
+
+    <!-- Unordered List of 4 items-->
+        <h2>An unordered HTML list</h2>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            <li>Hot Chocolate</li>
+        </ul> 
+
+    <!-- Ordered List of 3 items-->
+        <h2>An ordered HTML list</h2>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol> 
+    
+    <!-- Nested list-->
+        <h2>Nested List</h2> 
+        <ul>
+            <li>Coffee</li>
+            <li>Tea
+            <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+            </ul>
+            </li>
+            <li>Milk</li>
+            <ul>
+                <li>Vanilla Milk</li>
+                <li>Almond Milk</li>
+            </ul>
+        </ul>
+
+    </article>
+
+    <!-- Second Article-->
+    <article>
+        <h2>HTML elements - Tables - table, thead, tbody, tr, td, th</h2>
+    
+        <h2>Table with colspan</h2>
+        <table style="width:25%">
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>57</td>
+            </tr>
+        </table>
+
+        <h2>Cell that spans two rows</h2> 
+        <table style="width:25%">
+            <tr>
+                <th>Name</th>
+                <td>Jill</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Phone</th>
+                <td>555-1234</td>
+            </tr>
+            <tr>
+                <td>555-8745</td>
+            </tr>
+        </table>
+    </article>
+
+    <article>
+    <h2>HTML elements img, video, audio</h2>
+    <h3>Image</h3>
+    <img src="https://picsum.photos/400/400" alt="Landscape" style="width:500px; height: 600px;" >
+
+    <h3>Video</h3>
+    <figure>
+        <video autoplay width="250">
+        <source src="/assets/flower.webm" type="video/webm">
+        Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figcaption>This is a caption for the video</figcaption>
+    </figure>
+
+    <h3>Audio</h3>
+    <figure>
+        <audio autoplay src="/assets/t-rex-roar.mp3">
+        Your browser does not support the <code>audio</code> element.
+        </audio>
+        <figcaption>This is a caption for the audio</figcaption>
+    </figure>
+
+    </article>
+
+    <header>
+    <nav>
+    <!-- works like <a href="/index.html">Home</a> -->
+        <a href="form.html">Home</a>
+    </nav>
+    </header>
+
+    <main>  
+    </main>
+
+    <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>
