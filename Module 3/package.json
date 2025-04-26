@@ -1,0 +1,12 @@
+{
+  "name": "node-fetch",
+  "version": "1.0.0",
+  "main": "Lab3_JSAdva.js",
+  "scripts": {
+    "test": "npm install node-fetch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
