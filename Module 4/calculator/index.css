@@ -1,0 +1,35 @@
+.calculator{
+    display: flex; 
+    max-width: 500px;
+    
+}
+
+#display{
+    width: 32%; 
+    padding: 20px;
+    background-color: grey;
+    color: white;
+}
+
+.numbers button{
+    background-color: black;
+    color: white;
+}
+
+button{
+    font-size: 20px;
+    width: 61px;
+}
+
+.del{
+    width: 191px;
+    
+}
+
+.operator{
+    display: flex; 
+    flex-direction: column; 
+    justify-content:center; 
+    align-items: center; 
+
+}

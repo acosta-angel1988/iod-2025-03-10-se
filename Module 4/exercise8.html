@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Luxon DateTime Formatting</title>
+    <script
+        src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js">
+    </script> <!-- reference Luxon library -->
+</head>
+<body>
+<h2>Luxon Date</h2>
+<!-- container for Luxon output -->
+<div id="displayLuxon"></div>
+
+<script type="text/javascript">
+(function() {
+
+    // Import the DateTime object from Luxon
+    const DateTime  = luxon.DateTime;
+    let nowLuxon = DateTime.now();
+
+    // 1. Set your birthdate (example: December 22, 1988)
+    let eDisplayLuxon = document.getElementById('displayLuxon');
+    
+    const birthDate = DateTime.fromISO("1988-12-22");
+
+    // 2. Get the current date
+    const currentDate = DateTime.now();
+
+    // 3. Calculate the difference in days
+    const diffInDays = currentDate.diff(birthDate, "days").days;
+
+    
+
+    eDisplayLuxon.innerHTML += (`Number of days between birthdate and now: ${Math.floor(diffInDays)} days`);
+    
+    // Calculate the difference in years, months, and days
+    const diff = currentDate.diff(birthDate, ['years', 'months', 'days']).toObject();
+    eDisplayLuxon.innerHTML += (`<p>You are ${Math.floor(diff.years)} years, ${Math.floor(diff.months)} months, and ${Math.floor(diff.days)} days old.</P>`);
+
+    // Replace these with your actual dates
+    const date1 = DateTime.fromISO("2024-12-01");
+    const date2 = DateTime.fromISO("2025-01-15");
+
+// Calculate the absolute time difference from 'now'
+const diff1 = Math.abs(nowLuxon.diff(date1, 'milliseconds').milliseconds);
+const diff2 = Math.abs(nowLuxon.diff(date2, 'milliseconds').milliseconds);
+
+// Determine which is closer
+const closestDate = diff1 < diff2 ? date1 : date2;
+
+eDisplayLuxon.innerHTML += (`<p>The date closest to today is: ${closestDate.toISODate()}</P>`);
+
+    // Replace these with your actual dates
+const date3 = DateTime.fromISO("2024-12-01");
+const date4 = DateTime.fromISO("2025-01-15");
+
+// Compare the two dates
+if (date3 < date4) {
+    eDisplayLuxon.innerHTML +=(`${date3.toISODate()} is BEFORE ${date4.toISODate()}`);
+} else if (date3 > date4) {
+    eDisplayLuxon.innerHTML +=(`${date3.toISODate()} is AFTER ${date4.toISODate()}`);
+} else {
+    eDisplayLuxon.innerHTML +=(`${date3.toISODate()} is the SAME as ${date4.toISODate()}`);
+}
+
+// Get current time in London
+const londonTime = DateTime.now().setZone("Europe/London");
+
+// Display the time
+eDisplayLuxon.innerHTML +=(`<p>Current time in London: ${londonTime.toFormat("HH:mm:ss")}</p>`);
+
+
+})();
+</script>
+</body>
+</html>
