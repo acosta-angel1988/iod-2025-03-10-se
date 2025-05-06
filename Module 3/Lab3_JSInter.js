@@ -65,22 +65,32 @@ function findMatchingAnimal (beginsWith){
 console.log(findMatchingAnimal('T'));
 
 //Exercise 4////////////////////////////////////////////////////////
-console.log('Exercise 4');
-function camelCase(cssProp){
-    str = cssProp;
-    let words = str.split("-");
-    for (let i = 1; i < words.length; i++){
-        words[i] = words[i][0].toUpperCase() + words[i].slice(1); 
-    }
-    let newString = words.join("");
-    return newString;
-}
+function camelCase(cssProp) { 
+    let words = cssProp.split('-'); 
+    let camelString = '';
 
+    words.forEach(word => { 
+        if (camelString.length == 0) { 
+            //don't capitalize the first word 
+            camelString = word; 
+        } else { camelString += word.charAt(0).toUpperCase() + word.substring(1) 
 
-console.log(camelCase("my-dashed-word"));
-console.log(camelCase('margin-left')); // marginLeft 
-console.log(camelCase('background-image')); // backgroundImage 
-console.log(camelCase('display')); // display
+        } 
+    }); 
+    
+    return camelString; 
+} 
+const camelCase2 = (cssProp) => { 
+    let camelString = ''; 
+    
+    for (let word of cssProp.split('-')) { 
+        camelString += (camelString.length == 0) ? word : word.charAt(0).toUpperCase() + word.substring(1); 
+    } 
+    return camelString; 
+} 
+console.log(camelCase('margin-left')) // marginLeft 
+console.log(camelCase2('background-image')) // backgroundImage 
+console.log(camelCase('display')) // display
 
 //Exercise 5////////////////////////////////////////////////////////
 console.log('Exercise 5');
