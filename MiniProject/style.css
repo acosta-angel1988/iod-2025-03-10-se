@@ -1,5 +1,5 @@
 body{
-    background-image: url(forestBackground.png);
+    background-image: url(./mazeImages/forestBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -24,28 +24,14 @@ body{
 
 }
 
-button{
-    background-color: aqua;
-    font-size: 20px;
-}
-.bunny{
-    background-image: url(BunnyRunSide.png);
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    background-size: 1200px;
-    animation: walk-across steps(8) linear infinite;
-    
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-
-@keyframes walk-across {
-    0% {
-        left: -100px;
-    }
-    100% {
-        left: 100vw;
-    }
+.item {
+  flex: 1 1 300px; /* grow, shrink, base */
 }
 
 

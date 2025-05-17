@@ -7,47 +7,64 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url(./mazeImages/forestBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center; 
+    
 
+}
+
+.container{
+    min-width: 5px;
 }
 
 .maze {
     display: grid;
     grid-template-columns: repeat(25, 30px);
-    grid-template-rows: repeat(25, 30px);
-    gap: 2px;
-    
+    grid-template-rows: repeat(25, 30px); 
 }
 
 .cell {
     width: 30px;
     height: 30px;
-    background-image: url(open.png);
+    background-image: url(./mazeImages/open.png);
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
 }
 
 .wall {
-    background-image: url(closed.png);
+    background-image: url(./mazeImages/closed.png);
+    
+    
 }
 
 .player {
-    background-image: url(BunnyRun.png);
+    background: greenyellow;
+    background-image: url(./mazeImages/BunnyRun.png);
 }
     
 .goal {
-    background-image: url(carrot.png);
-    object-fit:scale-down;
+    background-image: url(./mazeImages/goal.png);
+    object-fit: fill;
+    background-repeat: no-repeat;
 }
 
 #timer {
     font-size: 48px;
     font-weight: bold;
     transition: color 0.3s ease;
+    text-align: center;
 }
 
 button {
     margin-top: 20px;
     font-size: 18px;
     padding: 10px 20px;
+    display: block;
+    margin: auto;
 }
