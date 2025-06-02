@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Calculator Example</title>
+</head>
+<body>
+    <div>Results:
+        <p>Sum of both numbers is:</p>
+        <span id="result"></span>
+        <p>Multiplication of both numbers is:</p>
+        <span id="result2"></span>
+        <p>Divide both numbers is:</p>
+        <span id="result3"></span>
+        <p>Subtraction of both numbers is:</p>
+        <span id="result4"></span>
+        <p>Random number between 0 and 10 is:</p>
+        <span id="result5"></span>
+        <p>Random number between 4 and 10 is:</p>
+        <span id="result6"></span>
+    </div>
+    <br>
+    <!--Calculator Lab exercise 3-->
+    <div class="calculator">
+        <h2>Simple Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter first number" />
+        <input type="number" id="num2" placeholder="Enter second number" />
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+<script>
+    let num1 = 10;
+    let num2 = 4;
+    fetch(`/calculator/add?num1=${num1}&num2=${num2}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result").innerHTML = data.result;
+    })
+
+
+    fetch(`/calculator/multiply?num1=${num1}&num2=${num2}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result2").innerHTML = data.result2;
+    })
+
+    fetch(`/calculator/divide?num1=${num1}&num2=${num2}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result3").innerHTML = data.result3;
+    })
+
+    fetch(`/calculator/subtract?num1=${num1}&num2=${num2}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result4").innerHTML = data.result4;
+    })
+
+    fetch(`/calculator2/max?num1=${num1}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result5").innerHTML = data.result5;
+    })
+
+    fetch(`/calculator2/maxmin?num1=${num1}&num2=${num2}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result6").innerHTML = data.result6;
+    })
+</script>
+</html>
