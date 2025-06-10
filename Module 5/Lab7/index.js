@@ -1,25 +1,22 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-const calculatorRoutes = require('./routes/calculator.routes');
-const extraRoutes = require('./routes/extraRoutes');
-const calculatorController = require('./routes/calculatorRoute');
-const Calculator = require('./libraries/Calculator');
+const calculatorRoutes = require("./routes/calculator.routes");
+const extraRoutes = require("./routes/extraRoutes");
+//const calculatorController = require("./routes/calculatorRoute");
+// const Calculator = require("./libraries/Calculator");
 
 app.use(express.json());
 app.use("/", express.static("public"));
 
-
-
-
 // map the calculator routes to our app
-app.use('/calculator', calculatorRoutes);
+app.use("/calculator", calculatorRoutes);
 
-app.use('/calculator2', extraRoutes);
+app.use("/calculator2", extraRoutes);
 
-//Lab 3
-app.post('/calculate', (req, res) => {
+//Lab 3 *** So we shouldn't have any logic in the index.js just the set up for the server and the path to your routes. no logic***
+/*app.post('/calculate', (req, res) => {
     const { num1, num2, operator } = req.body;
 
     if (typeof num1 !== 'number' || typeof num2 !== 'number') {
@@ -59,8 +56,8 @@ let myCalc5 = new Calculator()
 myCalc3.subtract(3,4)
 myCalc4.multiply(4,2)
 myCalc5.divide(5,4)
-
+*/
 app.listen(port, () => {
-console.log(`Example app listening
-at http://localhost:${port}`)
-})
+  console.log(`Example app listening
+at http://localhost:${port}`);
+});
