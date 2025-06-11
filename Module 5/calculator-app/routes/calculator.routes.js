@@ -13,8 +13,8 @@ router.get("/add", (req, res) => {
     res.status(200);
     res.json({ result: sum });
   } catch (err) {
-    res.status(500);
-    console.log(err);
+    res.status(400);
+    console.log(`add rout: ${err}`);
   }
 });
 
