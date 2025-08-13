@@ -1,0 +1,167 @@
+<!DOCTYPE html> <!-- HTML5 doctype declaration -->
+<html lang="en"> <!-- Root of the document, language set to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Document</title> <!-- Title shown in browser tab -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar">
+    <div class="nav-left">
+        <p>MyCompany</p>
+    </div>
+    <div class="nav-right">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">Services</a></li>
+            <li><a href="#contact">Locations</a></li>
+            <li><a href="clientForm.html">Forms</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- End of Header -->
+
+<!--section1 video -->
+<div class="section1">
+    <div class="text-overlay">
+        <h1>Mobile Grooming</h1>
+        <p>Dogs and Cats</p>
+    </div>
+    <div class="video-container">
+        <video autoplay loop muted poster="http">
+            <source src="dog_background.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+</div>
+
+<!-- End of section1  -->
+
+<!-- Section2 start -->
+<div class="section2">
+    <div class="section2-overlay"></div>
+        <div class="process">
+            <h1>How is works</h1>
+
+            <div class="image-text-pair">
+                <img src="./images/calendar.png" class="image-size"  alt="calendar">
+                <div class="text-img">
+                    <h2>Schedule Online in Minutes!</h2>
+                </div>
+            </div>
+
+            <div class="image-text-pair">
+                <img src="./images/van.png" class="image-size" alt="van">
+                <div class="text-img">
+                    <h2>Grooming Van Comes to you!</h2>
+                </div>
+            </div>
+        
+            <div class="image-text-pair">
+                <img src="./images/gromming.png" class="image-size" alt="grooming">
+                <div class="text-img">
+                    <h2>Groom & Bathe Dogs & Cats!</h2>
+                </div>
+            </div>
+        
+        </div>
+        <!-- Animals sideshow -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./images/cat_grooming.jpg" class="slide-image" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./images/dog_grooming.jpg" class="slide-image"  style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./images/dog_grooming2.jpg" class="slide-image" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of section2 -->
+
+<br>
+
+<!-- Section3 -->
+<div class="section3">
+    <img src="./images/van2.png" alt="van">
+    <h1> Why choose Mobile Grooming</h1>
+    <p>Looking for the best mobile pet grooming service? Choose Furry Land Mobile Pet Grooming for convenience, 
+        affordability, and peace of mind! With more than 75 locations and counting across the nation, 
+        Furry Land Mobile Grooming is here to provide a cage free grooming experience, ensuring your pet is safe, happy, and healthy. 
+        Busy schedule? Not a problem! Our state-of-the-art mobile grooming salon comes to you! Our professional grooming team makes it easy 
+        to schedule an appointment at a time that best suits your schedule and your pet’s needs. No more mess or stress, just simply happy pets!
+
+        Furry Land Mobile Grooming team is equipped with the highest quality of training, producing the most compassionate and skilled groomers in the nation! 
+        We only use industry-leading equipment and the most gentle and effective grooming products available to give your dog or cat a stress-free, 
+        full-service grooming experience you can count on! Plus when your pet leaves our mobile grooming station they will be happy, clean, and refreshed — 
+        that’s the Furry Land promise!</p>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <ul>
+            <li><a href="">210-555-5555</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Our Story</a></li>
+            <li><a href="">Franchise Opportunities</a></li>
+        </ul>
+    </div>
+        <p>©2025 Furry Land™. All Rights Reserved. | Powered by ContentMassive</p>
+    
+</footer>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    } 
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+</script>
+
+    
+</body>
+</html>

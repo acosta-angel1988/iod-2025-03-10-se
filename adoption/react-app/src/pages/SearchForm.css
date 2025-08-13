@@ -1,0 +1,98 @@
+.searchform-container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Left form section */
+.searchform-form-section {
+  flex: 0 1 400px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right slideshow section */
+.searchform-slideshow-section {
+  flex: 0 1 560px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form layout */
+.searchform-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Labels */
+.searchform-form label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  display: block;
+  cursor: pointer;
+}
+
+/* Inputs and selects */
+.searchform-select,
+.landing-input {
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #34495e;
+}
+
+.searchform-select:hover,
+.landing-input:hover {
+  border-color: #a0aec0;
+}
+
+.searchform-select:focus,
+.landing-input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 6px rgba(49, 130, 206, 0.4);
+  color: #2d3748;
+}
+
+/* Submit button */
+.searchform-button {
+  padding: 16px 24px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  background-color: #3182ce;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(49, 130, 206, 0.35);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.searchform-button:hover,
+.searchform-button:focus {
+  background-color: #2b6cb0;
+  box-shadow: 0 8px 16px rgba(43, 108, 176, 0.5);
+  transform: translateY(-2px);
+  outline: none;
+}

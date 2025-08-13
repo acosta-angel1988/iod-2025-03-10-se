@@ -1,0 +1,212 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+/*navbar start*/
+nav {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between; /* left and right aligned */
+  align-items: center;  
+}
+
+.nav-left {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 20px;
+}
+
+.nav-right li{
+  float: right;
+
+}
+
+ul{
+  list-style-type: none;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+/*Section one start*/
+
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent for contrast */
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/*Section2 start*/
+.section2{
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+
+.image-text-pair{
+  display: flex;
+}
+.image-size{
+  width: 100px;
+
+  
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  width: 50%;
+}
+
+.slide-image{
+  width: 800px;
+  height: 400px;;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.section3 h1{
+  text-align: center;
+}
+.section3 img{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section3 p{
+  padding: 20px;
+}
+
+footer{
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container li{
+  text-align: center;
+}
+.container ul{
+  display: flex;
+  
+  
+}
+
+
+
+

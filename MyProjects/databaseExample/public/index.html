@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Database</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Employee List</h1>
+
+    <!-- Add Employee Form -->
+    <form id="employee-form" method="POST" action="/add">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="role" placeholder="Role" required />
+      <button type="submit">Add Employee</button>
+    </form>
+
+    <!-- Displayed Employee List -->
+    <div id="employee-list"></div>
+  </div>
+
+  <script>
+    // Fetch and display employees from backend
+    fetch("/employees")
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("employee-list");
+        data.forEach(emp => {
+          const card = document.createElement("div");
+          card.className = "employee-card";
+          card.innerHTML = `
+            <h2>${emp.name}</h2>
+            <p><strong>Email:</strong> ${emp.email}</p>
+            <p><strong>Role:</strong> ${emp.role}</p>
+          `;
+          list.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>

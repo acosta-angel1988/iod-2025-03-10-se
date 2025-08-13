@@ -1,0 +1,39 @@
+.section4 h1 {
+  padding: 20px;
+}
+
+.search-container {
+  display: flex;
+  
+  margin: 20px;
+}
+
+.search-input {
+  width: 1000px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #2E7D32;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.6);
+}
+
+.search-btn {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #45a049;
+}

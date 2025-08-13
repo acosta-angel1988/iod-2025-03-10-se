@@ -8,7 +8,7 @@ const Header = ({ language, toggleLanguage, isDarkMode, toggleDarkMode }) => {
       
       {/* Avatar, Name, and Dark Mode Switch together */}
       <div className="logo-container">
-        <img src={avatar} alt="avatar" className="avatar" />
+
         <span className="name">Angel A. Acosta</span>
 
         {/* Dark Mode Switch */}

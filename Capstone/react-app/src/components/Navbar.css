@@ -1,0 +1,97 @@
+nav.navbar {
+  position: relative;      /* so z-index works */
+  z-index: 10;            /* above video */
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Left side */
+.nav-left {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Center dropdown */
+.nav-center {
+  position: relative; /* so dropdown absolute positions relative to this */
+}
+
+/* Dropdown button */
+.dropbtn {
+  background: none;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown container */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Dropdown menu content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;  /* right below button */
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 50px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 20;  /* above nav */
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effects */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+/* Right side nav items */
+.nav-right ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.nav-right li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-right li a:hover {
+  background-color: #111;
+}
+
+.nav-right li a.active {
+  background-color: #555;
+}

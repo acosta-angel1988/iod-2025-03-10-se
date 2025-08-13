@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/dataController');
+
+// CRUD Endpoints
+router.get('/', controller.getAll);         // GET all records
+router.get('/:id', controller.getOne);      // GET by ID
+router.post('/', controller.create);        // POST new record
+router.put('/:id', controller.update);      // PUT (update) record
+router.delete('/:id', controller.delete);   // DELETE record
+
+module.exports = router;
