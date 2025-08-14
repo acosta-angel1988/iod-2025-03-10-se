@@ -1,25 +1,44 @@
-nav.navbar {
-  position: relative;      /* so z-index works */
-  z-index: 10;            /* above video */
-  background-color: #333;
+/* Navbar container */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  height: 60px;
+  background-color: #ff7f50;
   color: white;
-  font-family: Arial, sans-serif;
+   padding: 0 40px;   /* increased from 20px */
 }
 
 /* Left side */
 .nav-left {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
+  gap: 10px;
 }
 
-/* Center dropdown */
-.nav-center {
-  position: relative; /* so dropdown absolute positions relative to this */
+/* Navbar title font */
+.navbarTitle {
+  font-family: 'Tangerine', serif;
+}
+
+/* Right side nav items */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;        /* ensures all items are visible */
+  margin-left: 70px;      /* push nav-right away from the left */
+}
+
+/* Keep links and dropdown from breaking */
+.nav-right a,
+.dropdown {
+  white-space: nowrap;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
 /* Dropdown button */
@@ -30,24 +49,31 @@ nav.navbar {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 5px;
 }
 
-/* Dropdown container */
-.dropdown {
-  display: inline-block;
-  position: relative;
-}
-
-/* Dropdown menu content */
+/* Dropdown content */
 .dropdown-content {
-  display: none;
   position: absolute;
-  top: 100%;  /* right below button */
-  left: 0;
-  background-color: #f1f1f1;
-  min-width: 50px;
+  top: 100%;                
+  left: 0;                   /* align with button */
+  background-color: orange;
+  min-width: 150px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 20;  /* above nav */
+  border-radius: 5px;
+  z-index: 20;              
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 /* Dropdown links */
@@ -58,44 +84,28 @@ nav.navbar {
   display: block;
 }
 
-/* Hover effects */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
+/* Dropdown button hover */
 .dropdown:hover .dropbtn {
-  background-color: black;
+  background-color: rgba(0,0,0,0.2);
 }
 
-/* Right side nav items */
-.nav-right ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  gap: 10px;
-}
-
-.nav-right li a {
-  display: block;
+/* Nav link styles */
+.nav-right a {
   color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
 }
 
-.nav-right li a:hover {
-  background-color: #111;
+.nav-right a:hover {
+  background-color: rgba(0,0,0,0.2);
 }
 
-.nav-right li a.active {
-  background-color: #555;
-}
-
-.navbarTitle{
-  font-family: 'Tangerine', serif;
+.nav-right a.active {
+  background-color: rgba(255,255,255,0.3);
 }

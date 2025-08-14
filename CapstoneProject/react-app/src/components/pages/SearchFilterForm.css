@@ -40,3 +40,7 @@
     flex-basis: auto;
   }
 }
+
+body{
+  background-color: orange;
+}

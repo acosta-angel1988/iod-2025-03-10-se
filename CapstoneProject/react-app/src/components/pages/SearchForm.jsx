@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './SearchForm.css';
+import Slideshow from "../Slideshow"
 
 const SearchForm = () => {
   const [selectedAnimal, setSelectedAnimal] = useState("");
@@ -18,6 +19,7 @@ const SearchForm = () => {
   };
 
   return (
+    <div className="search-container">
     <form onSubmit={handleSubmit} className="search-form" noValidate>
       <div className="form-group">
         <h2 className="searchTitle">Ready to adopt a pet?
@@ -56,6 +58,8 @@ const SearchForm = () => {
         Search
       </button>
     </form>
+    <Slideshow/>
+    </div>
   );
 };
 
