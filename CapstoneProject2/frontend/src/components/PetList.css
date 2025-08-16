@@ -1,0 +1,25 @@
+.pet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+/* Optional: add smooth animation when cards appear */
+.pet-list .pet-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pet-list .pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .pet-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,40 @@
+.cat-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff9f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cat-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #ff6f61;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Pet list container */
+.pet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Optional: responsive adjustments */
+@media (max-width: 600px) {
+  .cat-page {
+    padding: 15px;
+  }
+
+  .cat-page h1 {
+    font-size: 2rem;
+  }
+
+  .pet-list {
+    grid-template-columns: 1fr;
+  }
+}

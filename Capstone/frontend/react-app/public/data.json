@@ -1,0 +1,116 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "name": "Buddy",
+      "type": "Dog",
+      "breed": "Golden Retriever",
+      "sex": "Male",
+      "size": "Large",
+      "color": "Golden",
+      "location": "Chicago",
+      "image": "https://placedog.net/400/400?id=1"
+    },
+    {
+      "id": 2,
+      "name": "Bella",
+      "type": "Dog",
+      "breed": "Labrador Retriever",
+      "sex": "Female",
+      "size": "Large",
+      "color": "Yellow",
+      "location": "Boston",
+      "image": "https://placedog.net/401/401?id=2"
+    },
+    {
+      "id": 3,
+      "name": "Max",
+      "type": "Dog",
+      "breed": "German Shepherd",
+      "sex": "Male",
+      "size": "Large",
+      "color": "Black/Tan",
+      "location": "Dallas",
+      "image": "https://placedog.net/402/402?id=3"
+    },
+    {
+      "id": 4,
+      "name": "Lucy",
+      "type": "Dog",
+      "breed": "Beagle",
+      "sex": "Female",
+      "size": "Medium",
+      "color": "Tri-color",
+      "location": "Seattle",
+      "image": "https://placedog.net/403/403?id=4"
+    },
+    {
+      "id": 5,
+      "name": "Charlie",
+      "type": "Dog",
+      "breed": "Bulldog",
+      "sex": "Male",
+      "size": "Medium",
+      "color": "White/Brown",
+      "location": "San Diego",
+      "image": "https://placedog.net/404/404?id=5"
+    }
+  ],
+  "cats": [
+    {
+      "id": 6,
+      "name": "Mittens",
+      "type": "Cat",
+      "breed": "Tabby",
+      "sex": "Female",
+      "size": "Small",
+      "color": "Brown",
+      "location": "San Francisco",
+      "image": "https://placekitten.com/400/400"
+    },
+    {
+      "id": 7,
+      "name": "Luna",
+      "type": "Cat",
+      "breed": "Siamese",
+      "sex": "Female",
+      "size": "Small",
+      "color": "Cream",
+      "location": "New York",
+      "image": "https://placekitten.com/401/401"
+    },
+    {
+      "id": 8,
+      "name": "Shadow",
+      "type": "Cat",
+      "breed": "Black Shorthair",
+      "sex": "Male",
+      "size": "Medium",
+      "color": "Black",
+      "location": "Los Angeles",
+      "image": "https://placekitten.com/402/402"
+    },
+    {
+      "id": 9,
+      "name": "Whiskers",
+      "type": "Cat",
+      "breed": "Maine Coon",
+      "sex": "Male",
+      "size": "Large",
+      "color": "Gray",
+      "location": "Portland",
+      "image": "https://placekitten.com/403/403"
+    },
+    {
+      "id": 10,
+      "name": "Cleo",
+      "type": "Cat",
+      "breed": "Calico",
+      "sex": "Female",
+      "size": "Small",
+      "color": "Orange/Black/White",
+      "location": "Austin",
+      "image": "https://placekitten.com/404/404"
+    }
+  ]
+}
