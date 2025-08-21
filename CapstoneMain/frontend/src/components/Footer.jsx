@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <ul>
-          <li><a href="tel:2105555555">210-555-5555</a></li>
+          <li><a href="tel:4752284642">475-228-4642</a></li>
           <li><a href="#privacy">Privacy Policy</a></li>
           <li><a href="#ourstory">Our Story</a></li>
           <li><a href="#franchise">Franchise Opportunities</a></li>
