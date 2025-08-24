@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PetList from "../components/PetList";
 import SearchForm from "../components/SearchFilterForm";
 
+// Variables to hold all dogs search options
 const DogPage = () => {
   const [dogs, setDogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -10,6 +11,7 @@ const DogPage = () => {
   const [color, setColor] = useState("");
   const [location, setLocation] = useState("");
 
+//Fetch dogs from backend 
   useEffect(() => {
     const fetchDogs = async () => {
       const res = await fetch("http://localhost:5000/api/dogs");
@@ -18,7 +20,7 @@ const DogPage = () => {
     };
     fetchDogs();
   }, []);
-
+//Filter dogs on searchterm
   const filteredDogs = dogs.filter((pet) => {
     const matchesName = pet.name?.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesBreed = breed ? pet.breed.toLowerCase().includes(breed.toLowerCase()) : true;
@@ -31,6 +33,7 @@ const DogPage = () => {
   return (
     <div className="dog-page">
       <h1>Find Your Dog</h1>
+      {/* SearchForm component to control all search/filter inputs */}
       <SearchForm
         searchTerm={searchTerm} setSearchTerm={setSearchTerm}
         breed={breed} setBreed={setBreed}
@@ -38,6 +41,7 @@ const DogPage = () => {
         color={color} setColor={setColor}
         location={location} setLocation={setLocation}
       />
+      {/* Display filtered dogs*/}
       <PetList pets={filteredDogs} />
     </div>
   );

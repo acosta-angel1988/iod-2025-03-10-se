@@ -3,11 +3,11 @@ import "./Slideshow2.css";
 
 const Slideshow2 = () => {
   const images2 = [
-    './Images/cat1.jpg',
-    './Images/dog1.jpg',
-    './Images/dog2.jpg',
-    './Images/cat2.jpg',
-    './Images/dog3.jpg',
+    './Images/CATANDDOGS.jpg',
+    './Images/CATSANDDOGS2.jpg',
+    './Images/CATANDDOGS3.jpg',
+    './Images/CATSANDDOGS4.jpg',
+    './Images/CATSANDDOGS5.jpg',
   ];
 
   // Duplicate images for smooth looping

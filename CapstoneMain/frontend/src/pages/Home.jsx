@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Section1 from "../components/Section1";
 import Section3 from "../components/Section3";
 import Footer from "../components/Footer";
-import Slideshow from "../components/Slideshow2"
+import Slideshow from "../components/Slideshow2";
 import "./Home.css";
 
 const Home = () => {
@@ -20,8 +20,13 @@ const Home = () => {
       if (!res.ok) throw new Error("Failed to fetch pets");
       const data = await res.json();
       setPets(data); // store fetched pets if needed
-      // navigate to the page
-      navigate(type === "Dog" ? "/pets/dogs" : "/pets/cats");
+
+      // ✅ Navigate same as Navbar
+      if (type === "Dog") {
+        navigate("/dogs");
+      } else {
+        navigate("/cats");
+      }
     } catch (err) {
       console.error(err);
       alert("Error fetching pets from backend");
@@ -30,7 +35,7 @@ const Home = () => {
   };
 
   return (
-    <di className="Sections">
+    <div className="Sections">
       <Section1 />
       <div className="home-container">
         <h1>Welcome to My New Pet Adoption</h1>
@@ -53,9 +58,9 @@ const Home = () => {
         </div>
       </div>
       <Section3 />
-      <Slideshow/>
+      <Slideshow />
       <Footer />
-  </di>
+    </div>
   );
 };
 

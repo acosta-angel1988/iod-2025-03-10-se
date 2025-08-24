@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./PetForm.css";
 
+// State for the pet being added via the form
 const PetForm = ({ onPetAdded }) => {
   const [pet, setPet] = useState({
     type: "Dog",
@@ -14,9 +15,9 @@ const PetForm = ({ onPetAdded }) => {
     email: "",
     image: ""
   });
-
+  // Holds the list of pets currently being previewed
   const [previewPets, setPreviewPets] = useState([]);
-
+  // Update state whenever form inputs change
   const handleChange = (e) => {
     setPet({ ...pet, [e.target.name]: e.target.value });
   };
